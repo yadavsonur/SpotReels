@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================= VIDEO PLAYER ================= -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:use_controller="false" />
+
+    <!-- ================= GRADIENT OVERLAY FOR CAPTION VISIBILITY ================= -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:background="#80000000"/>
+
+    <!-- ================= RIGHT SIDE ACTION BUTTONS ================= -->
+    <LinearLayout
+        android:id="@+id/rightActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="end|center_vertical"
+        android:paddingEnd="16dp"
+        android:paddingBottom="80dp">
+
+        <!-- Profile -->
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/circle_white"
+            android:padding="3dp"
+            android:contentDescription="Profile picture" />
+
+        <!-- Like -->
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_like_outline"
+            app:tint="@android:color/white"
+            android:layout_marginTop="18dp"
+            android:contentDescription="Like video" />
+
+        <!-- Comment -->
+        <ImageButton
+            android:id="@+id/btnComment"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_comment"
+            app:tint="@android:color/white"
+            android:layout_marginTop="18dp"
+            android:contentDescription="Comment on video" />
+
+        <!-- Share -->
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_share"
+            app:tint="@android:color/white"
+            android:layout_marginTop="18dp"
+            android:contentDescription="Share video" />
+
+    </LinearLayout>
+
+    <!-- ================= CAPTION AREA ================= -->
+    <TextView
+        android:id="@+id/tvCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_gravity="bottom"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="18dp"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:maxLines="3"
+        android:ellipsize="end" />
+
+</FrameLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159667499306",
+    "project_id": "spotreels-b07fa",
+    "storage_bucket": "spotreels-b07fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159667499306:android:21bae5e8ba41b27ec46e53",
+        "android_client_info": {
+          "package_name": "com.sonu.spotreels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmkXJqYn5AYud5i_NEX8qSFqR07cwyPdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

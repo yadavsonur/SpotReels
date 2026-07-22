@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ✅ Internet needed for Firebase + Supabase + video streaming -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- ✅ For Android 12 and below -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+    <!-- ✅ For Android 13+ (Video Access Only) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SpotReels">
+
+        <!-- 1️⃣ Launcher Activity (Login / Signup) -->
+        <activity
+            android:name=".ui.auth.AuthActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2️⃣ Main Home Feed (TikTok-style feed) -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
+
+        <!-- 3️⃣ Upload Screen (Supabase Upload) -->
+        <activity
+            android:name=".ui.upload.SupabaseUploadActivity"
+            android:exported="false" />
+
+        <!-- 4️⃣ My Uploads / Profile Page -->
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+
+        <!-- 5️⃣ Comments Section -->
+        <activity
+            android:name=".ui.comments.CommentActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
