@@ -8,4 +8,10 @@ data class Follow(
     val followerUid: String,
     val followedUid: String,
     val createdAtMillis: Long
-)
+) {
+    init {
+        require(followerUid.isNotBlank() && followedUid.isNotBlank()) { "user IDs must not be blank" }
+        require(followerUid != followedUid) { "a user cannot follow themselves" }
+        require(createdAtMillis >= 0) { "createdAtMillis must be non-negative" }
+    }
+}
